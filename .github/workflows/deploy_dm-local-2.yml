@@ -1,0 +1,15 @@
+---
+name: Deploy dm-local-2
+
+on:
+  push:
+    branches:
+      - "dm-local-2"
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/acr_deploy_reusable.yml
+    name: Deploy dm-local-2
+    with:
+      environment: dm-local-2
+    secrets: inherit
