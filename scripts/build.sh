@@ -28,6 +28,6 @@ fi
 
 echo "Building ${LOCAL_IMAGE_NAME} for amd64..."
 
-cd "${SCRIPT_DIR}/../app/"
+cd "${SCRIPT_DIR}/../"
 eval "${DOCKER_BUILD_COMMAND} -t ${LOCAL_IMAGE_NAME} ."
 cd -
