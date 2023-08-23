@@ -26,7 +26,9 @@ RUN yarn install && yarn build
 RUN useradd -m appUser
 USER appUser
 
+# expose port 8000
+EXPOSE 8000
 
 # Serve the app on port 8000
 WORKDIR /app/api
-CMD uvicorn main:app
+CMD uvicorn --host 0.0.0.0 --port 8000 main:app
